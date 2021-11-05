@@ -1,3 +1,5 @@
+const { isFlowBaseAnnotation } = require("@babel/types");
+
 const artists = [
   {
     id: 0,
@@ -283,10 +285,18 @@ Use addArtist to do the following:
 
 Example: addArtist(artists) should return the artists array with the above object added to the end of the array. */
 
-function addArtist(/*Your Code Here*/) {
-  /*Your Code Here*/
+function addArtist(array) {
+  array.push({
+    id: 20,
+    name: "Dave Conley",
+    years: "1989-2021",
+    genre: "Web Design",
+    nationality: "United States of America",
+    bio: "I am originally from Boston. I live in Cottonwood Heights, UT now.",
+  });
+  return array;
 }
-
+console.log(addArtist(artists));
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Use lotsOfArt to do the following: 
 1. Receive an array 
@@ -294,10 +304,16 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
-}
+function lotsOfArt(array) {
+  const manyPaintings = [];
 
+  for (let i = 0; i < array.length; i++)
+    if (array[i].paintings > 100) {
+      manyPaintings.push(array[i].name);
+    }
+  return manyPaintings;
+}
+console.log(lotsOfArt(artists));
 /* ***** END OF TASKS ***** */
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑*/
