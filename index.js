@@ -244,15 +244,17 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(array) {
   const born = [];
-
+  
   for (let i = 0; i < array.length; i++) {
-    if (array[i].years) {
+    yearsArray = array[i].years.split(" - ")
+    if (array[i].years.split(" - ").includes("1900", i) {
       born.push(array[i].name);
     }
   }
   return born;
 }
-console.log(get20s(artists));
+
+console.log(get20s("Task 4", artists));
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use removeArtist to do the following:
 1. Receive an array
