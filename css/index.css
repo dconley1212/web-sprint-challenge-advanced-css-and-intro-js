@@ -253,11 +253,14 @@ button:hover {
         text-align: center;
         margin: 2%;
     }
-  
+
+    .artist img {
+        width: 60%;
+    }
     
     .bio {
         font-size: 1rem;
-        width: 84%;
-        margin: 6%
+        margin: 3% 11%
+        
     }
 }
